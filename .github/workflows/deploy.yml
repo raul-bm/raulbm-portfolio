@@ -1,0 +1,28 @@
+name: Deploy portfolio
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            set -e
+            if [ ! -d "$HOME/portfolio_web" ]; then
+              git clone https://github.com/TU_USER/portfolio_web.git "$HOME/portfolio_web"
+            fi
+            cd "$HOME/portfolio_web"
+            git pull origin main
+            docker compose up --build -d
+            docker image prune -af
