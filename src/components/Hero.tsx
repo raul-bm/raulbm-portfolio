@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Mail } from "lucide-react";
+import { Download } from "lucide-react";
 
 function Hero() {
   const codeLines = [
