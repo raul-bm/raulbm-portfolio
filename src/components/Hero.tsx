@@ -28,10 +28,10 @@ function Hero() {
     <section id="inicio" className="hero">
       <div className="hero-inner">
         <div>
-          <span className="hero-pill">
+          <a href="#contacto" className="hero-pill link-contact">
             <span className="hero-dot" />
             Abierto a oportunidades
-          </span>
+          </a>
           <h1>
             Hola, soy <span className="hero-gradient">Raúl Benítez</span>
           </h1>
@@ -40,31 +40,27 @@ function Hero() {
             . Construyo juegos y aplicaciones completas.
           </p>
           <div className="hero-actions">
-            <a href="#proyectos" className="btn btn-primary">
-              <ArrowRight size={16} />
-              Ver proyectos
-            </a>
             <a
               href="./files/curriculum-raulbm.pdf"
               download={true}
               target="_blank"
-              className="btn"
+              className="btn btn-primary"
             >
               <Download size={16} />
               Descargar CV
             </a>
           </div>
-          <div className="hero-social">
-            {/**<a href="https://github.com/tu-usuario" aria-label="GitHub">
+          {/**<div className="hero-social">
+            <a href="https://github.com/tu-usuario" aria-label="GitHub">
               <Github size={18} />
             </a>
             <a href="https://linkedin.com/in/tu-usuario" aria-label="LinkedIn">
               <Linkedin size={18} />
-            </a>**/}
+            </a>
             <a href="mailto:hola@raul.dev" aria-label="Email">
               <Mail size={18} />
             </a>
-          </div>
+          </div>**/}
         </div>
 
         <div className="hero-code">

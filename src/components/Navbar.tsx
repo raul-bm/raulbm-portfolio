@@ -43,7 +43,7 @@ function Navbar() {
             href="./files/curriculum-raulbm.pdf"
             download={true}
             target="_blank"
-            className="navbar-cv"
+            className="navbar-cv btn-primary"
           >
             <Download size={15} />
             CV

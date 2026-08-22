@@ -7,6 +7,7 @@ type Props = { project: Project; onClose: () => void };
 
 function ProjectModal({ project, onClose }: Props) {
   const [index, setIndex] = useState(0);
+  const [zoomed, setZoomed] = useState(false);
   const media = project.media;
   const item = media[index];
 
@@ -75,7 +76,7 @@ function ProjectModal({ project, onClose }: Props) {
             >
               <ChevronLeft size={18} />
             </button>
-            <div
+            {/**<div
               className="modal-media-placeholder"
               style={
                 !imageProject
@@ -94,7 +95,27 @@ function ProjectModal({ project, onClose }: Props) {
               <span className="modal-media-type">
                 {item.type.toUpperCase()}
               </span>
-            </div>
+            </div>**/}
+            {imageProject ? (
+              <img
+                src={imageProject}
+                alt={item.label}
+                className="modal-image"
+                onClick={() => setZoomed(true)}
+                style={{ cursor: "zoom-in" }}
+              ></img>
+            ) : (
+              <div
+                className="modal-media-placeholder"
+                style={{
+                  background: `linear-gradient(135deg, hsl(${project.hue} 55% 46%), hsl(${project.hue + 45} 62% 30%))`,
+                }}
+              >
+                <span className="modal-media-type">
+                  {item.type.toUpperCase()}
+                </span>
+              </div>
+            )}
             <button
               className="modal-nav"
               aria-label="Siguiente"
@@ -170,6 +191,17 @@ function ProjectModal({ project, onClose }: Props) {
           )}
         </div>
       </motion.div>
+      {zoomed && imageProject && (
+        <div
+          className="zoom-overlay"
+          onClick={(e) => {
+            e.stopPropagation();
+            setZoomed(false);
+          }}
+        >
+          <img src={imageProject} alt={item.label} className="zoom-image" />
+        </div>
+      )}
     </motion.div>
   );
 }
