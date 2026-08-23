@@ -110,11 +110,7 @@ function ProjectModal({ project, onClose }: Props) {
                 style={{
                   background: `linear-gradient(135deg, hsl(${project.hue} 55% 46%), hsl(${project.hue + 45} 62% 30%))`,
                 }}
-              >
-                <span className="modal-media-type">
-                  {item.type.toUpperCase()}
-                </span>
-              </div>
+              ></div>
             )}
             <button
               className="modal-nav"
@@ -154,20 +150,22 @@ function ProjectModal({ project, onClose }: Props) {
           ))}
         </div>
 
-        <p className="kicker-projectmodal">Enlaces</p>
-        <div className="modal-links">
-          {project.links.demo && (
-            <a
-              className="btn"
-              href={project.links.demo}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <ExternalLink size={15} />
-              Demo
-            </a>
-          )}
-          {/**{project.links.repo && (
+        {project.links && (
+          <>
+            <p className="kicker-projectmodal">Enlaces</p>{" "}
+            <div className="modal-links">
+              {project.links.demo && (
+                <a
+                  className="btn"
+                  href={project.links.demo}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <ExternalLink size={15} />
+                  Demo
+                </a>
+              )}
+              {/**{project.links.repo && (
             <a
               className="btn"
               href={project.links.repo}
@@ -178,18 +176,20 @@ function ProjectModal({ project, onClose }: Props) {
               Código
             </a>
           )} **/}
-          {project.links.video && (
-            <a
-              className="btn"
-              href={project.links.video}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Play size={15} />
-              Vídeo
-            </a>
-          )}
-        </div>
+              {project.links.video && (
+                <a
+                  className="btn"
+                  href={project.links.video}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Play size={15} />
+                  Vídeo
+                </a>
+              )}
+            </div>
+          </>
+        )}
       </motion.div>
       {zoomed && imageProject && (
         <div

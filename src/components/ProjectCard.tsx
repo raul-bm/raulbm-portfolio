@@ -30,7 +30,7 @@ function ProjectCard({ project, onSelect }: Props) {
                 backgroundSize: "contain",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
-                backgroundColor: `hsl(221, 53%, 82%)`,
+                backgroundColor: `hsl(221, 28%, 74%)`,
               }
         }
       >

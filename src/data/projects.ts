@@ -27,7 +27,10 @@ export const projects: Project[] = [
     ],
     links: { demo: "https://app-parking-raulbm.numinformatica.com" },
     media: [
-      { label: "Dashboard", type: "captura", src: "/images/app-parking-1.png" },
+      { label: "Captura 1", type: "captura", src: "/images/app-parking-1.png" },
+      { label: "Captura 2", type: "captura", src: "/images/app-parking-2.png" },
+      { label: "Captura 3", type: "captura", src: "/images/app-parking-3.png" },
+      { label: "Captura 4", type: "captura", src: "/images/app-parking-4.png" },
     ],
     hue: 170,
   },
@@ -45,7 +48,8 @@ export const projects: Project[] = [
     tech: ["Linux", "Prestashop", "MySQL"],
     links: { demo: "https://bellamapi.es" },
     media: [
-      { label: "Captura", type: "captura", src: "/images/bellamapi-1.png" },
+      { label: "Captura 1", type: "captura", src: "/images/bellamapi-1.png" },
+      { label: "Captura 2", type: "captura", src: "/images/bellamapi-2.png" },
     ],
     hue: 240,
   },
@@ -64,10 +68,26 @@ export const projects: Project[] = [
     tech: ["Unity", "C#"],
     links: { demo: "https://isg-games.itch.io/el-libro-magico-de-alimentos" },
     media: [
-      { label: "Captura", type: "captura", src: "/images/libro-magico-1.png" },
-      { label: "Captura", type: "captura", src: "/images/libro-magico-2.png" },
-      { label: "Captura", type: "captura", src: "/images/libro-magico-3.png" },
-      { label: "Captura", type: "captura", src: "/images/libro-magico-4.png" },
+      {
+        label: "Captura 1",
+        type: "captura",
+        src: "/images/libro-magico-1.png",
+      },
+      {
+        label: "Captura 2",
+        type: "captura",
+        src: "/images/libro-magico-2.png",
+      },
+      {
+        label: "Captura 3",
+        type: "captura",
+        src: "/images/libro-magico-3.png",
+      },
+      {
+        label: "Captura 4",
+        type: "captura",
+        src: "/images/libro-magico-4.png",
+      },
     ],
     hue: 95,
   },
@@ -82,7 +102,33 @@ export const projects: Project[] = [
     description: ["Videojuego creado en 2 días para la UJI Game Jam 2026."],
     tech: ["Unity", "C#"],
     links: { demo: "https://isg-games.itch.io/party-drinker" },
-    media: [{ label: "Captura", type: "captura" }],
+    media: [
+      {
+        label: "Captura 1",
+        type: "captura",
+        src: "/images/party-drinker-1.png",
+      },
+      {
+        label: "Captura 2",
+        type: "captura",
+        src: "/images/party-drinker-2.png",
+      },
+      {
+        label: "Captura 3",
+        type: "captura",
+        src: "/images/party-drinker-3.png",
+      },
+      {
+        label: "Captura 4",
+        type: "captura",
+        src: "/images/party-drinker-4.png",
+      },
+      {
+        label: "Captura 5",
+        type: "captura",
+        src: "/images/party-drinker-5.png",
+      },
+    ],
     hue: 208,
   },
   {
@@ -99,7 +145,13 @@ export const projects: Project[] = [
     ],
     tech: ["Unity", "C#"],
     links: { demo: "https://raulbm.itch.io/los-secretos-de-altura" },
-    media: [{ label: "Captura", type: "captura" }],
+    media: [
+      {
+        label: "Captura 1",
+        type: "captura",
+        src: "/images/secretos-altura-1.png",
+      },
+    ],
     hue: 54,
   },
   {
@@ -113,7 +165,23 @@ export const projects: Project[] = [
     description: ["Videojuego creado en 2 días para la UJI Game Jam 2024."],
     tech: ["Unity", "C#"],
     links: { demo: "https://alexc04.itch.io/trick-or-treat-kill-your-beat" },
-    media: [{ label: "Captura", type: "captura" }],
+    media: [
+      {
+        label: "Captura 1",
+        type: "captura",
+        src: "/images/trick-or-treat-1.png",
+      },
+      {
+        label: "Captura 2",
+        type: "captura",
+        src: "/images/trick-or-treat-2.png",
+      },
+      {
+        label: "Captura 3",
+        type: "captura",
+        src: "/images/trick-or-treat-3.png",
+      },
+    ],
     hue: 240,
   },
   {
@@ -128,7 +196,6 @@ export const projects: Project[] = [
       "Creación de un bot de Telegram con Node.js y MySQL para emitir alertas de monitorización remota vía Telegram",
     ],
     tech: ["Node.js", "Docker", "MySQL", "Telegram API", "WebSockets"],
-    links: { demo: "https://bellamapi.es" },
     media: [{ label: "Captura", type: "captura" }],
     hue: 240,
   },

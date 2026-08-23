@@ -13,7 +13,7 @@ export type Project = {
   short: string;
   description: string[];
   tech: string[];
-  links: { demo?: string; repo?: string; video?: string };
+  links?: { demo?: string; repo?: string; video?: string };
   media: MediaItem[];
   hue: number;
 };
