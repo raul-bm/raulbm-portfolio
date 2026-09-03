@@ -7,6 +7,8 @@ const groups = [
     title: "Web",
     skills: [
       "React",
+      "React-Native",
+      "Expo",
       "Node.js",
       "Express",
       "REST APIs",

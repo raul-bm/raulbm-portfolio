@@ -7,6 +7,7 @@ export type Project = {
   id: string;
   title: string;
   category: string;
+  inProgress: boolean;
   featured: boolean;
   role: string;
   year: string;

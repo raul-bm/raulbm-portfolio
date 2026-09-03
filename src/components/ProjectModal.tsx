@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, ExternalLink, Play, X } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  ExternalLink,
+  Play,
+  X,
+  Code,
+} from "lucide-react";
 import type { Project } from "../types";
 
 type Props = { project: Project; onClose: () => void };
@@ -165,17 +172,17 @@ function ProjectModal({ project, onClose }: Props) {
                   Demo
                 </a>
               )}
-              {/**{project.links.repo && (
-            <a
-              className="btn"
-              href={project.links.repo}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Github size={15} />
-              Código
-            </a>
-          )} **/}
+              {project.links.repo && (
+                <a
+                  className="btn"
+                  href={project.links.repo}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Code size={15} />
+                  Código
+                </a>
+              )}
               {project.links.video && (
                 <a
                   className="btn"

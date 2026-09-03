@@ -35,6 +35,9 @@ function ProjectCard({ project, onSelect }: Props) {
         }
       >
         <span className="project-card-cat">{project.category}</span>
+        {project.inProgress && (
+          <span className="project-card-cat3">EN PROGRESO</span>
+        )}
         {project.featured && (
           <span className="project-card-cat2">DESTACADO</span>
         )}
