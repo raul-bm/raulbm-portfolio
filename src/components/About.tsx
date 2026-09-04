@@ -1,35 +1,36 @@
 import { MapPin } from "lucide-react";
-
-const timeline = [
-  {
-    year: "2025 – hoy",
-    text: "Máster en Diseño y Programación de Videojuegos",
-  },
-  { year: "2021 – 2025", text: "Grado en Diseño y Desarrollo de Videojuegos" },
-  {
-    year: "2019 – 2021",
-    text: "FP Superior DAW - Desarrollo de Aplicaciones Web",
-  },
-  {
-    year: "2017 – 2019",
-    text: "FP Media SMR - Sistemas Microinformáticos y Redes",
-  },
-];
+import { useLang } from "../i18n/LanguageContext";
 
 function About() {
+  const { t } = useLang();
+
+  const timeline = [
+    {
+      year: t.about.year1,
+      text: t.about.textYear1,
+    },
+    {
+      year: t.about.year2,
+      text: t.about.textYear2,
+    },
+    {
+      year: t.about.year3,
+      text: t.about.textYear3,
+    },
+    {
+      year: t.about.year4,
+      text: t.about.textYear4,
+    },
+  ];
+
   return (
     <section id="sobre-mi" className="section">
       <div className="container about">
         <div className="about-avatar">RB</div>
         <div>
-          <p className="kicker">· Sobre mí</p>
-          <h2>De SMR a los videojuegos</h2>
-          <p>
-            Empecé en sistemas (SMR), me especialicé en desarrollo web (DAW) y
-            aterricé en el mundo del videojuego con un grado en diseño y
-            desarrollo de videojuegos. Ahora curso un máster en diseño y
-            programación de videojuegos mientras sigo construyendo proyectos.
-          </p>
+          <p className="kicker">· {t.about.title}</p>
+          <h2>{t.about.subTitle}</h2>
+          <p>{t.about.text}</p>
           <div className="timeline">
             {timeline.map((item) => (
               <div key={item.year} className="timeline-item">
@@ -41,7 +42,7 @@ function About() {
             ))}
           </div>
           <p className="section-sub">
-            <MapPin size={15} /> España · abierto a remoto
+            <MapPin size={15} /> {t.about.final}
           </p>
         </div>
       </div>

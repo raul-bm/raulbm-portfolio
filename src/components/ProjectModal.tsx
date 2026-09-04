@@ -9,10 +9,13 @@ import {
   Code,
 } from "lucide-react";
 import type { Project } from "../types";
+import { useLang } from "../i18n/LanguageContext";
 
 type Props = { project: Project; onClose: () => void };
 
 function ProjectModal({ project, onClose }: Props) {
+  const { t } = useLang();
+
   const [index, setIndex] = useState(0);
   const [zoomed, setZoomed] = useState(false);
   const media = project.media;
@@ -20,6 +23,8 @@ function ProjectModal({ project, onClose }: Props) {
 
   const imageProject =
     project.media.length > 0 ? project.media[index]?.src : null;
+
+  const tr = t.projectsDetails[project.id];
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -53,16 +58,16 @@ function ProjectModal({ project, onClose }: Props) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="modal-head">
-          <h3>{project.title}</h3>
+          <h3>{tr.title}</h3>
           <button className="modal-close" aria-label="Cerrar" onClick={onClose}>
             <X size={18} />
           </button>
         </div>
         <p className="modal-meta">
-          {project.role} · {project.year}
+          {tr.role} · {project.year}
         </p>
 
-        {project.description.map((d, i) => (
+        {tr.description.map((d, i) => (
           <p key={i} className="modal-desc">
             {d}
           </p>
@@ -148,7 +153,7 @@ function ProjectModal({ project, onClose }: Props) {
           </div>
         )}
 
-        <p className="kicker-projectmodal">Tecnologías</p>
+        <p className="kicker-projectmodal">{t.projectsUI.techTitle}</p>
         <div className="chips">
           {project.tech.map((t) => (
             <span key={t} className="chip">
@@ -159,7 +164,7 @@ function ProjectModal({ project, onClose }: Props) {
 
         {project.links && (
           <>
-            <p className="kicker-projectmodal">Enlaces</p>{" "}
+            <p className="kicker-projectmodal">{t.projectsUI.linksTitle}</p>{" "}
             <div className="modal-links">
               {project.links.demo && (
                 <a
@@ -169,7 +174,7 @@ function ProjectModal({ project, onClose }: Props) {
                   rel="noreferrer"
                 >
                   <ExternalLink size={15} />
-                  Demo
+                  {t.projectsUI.demo}
                 </a>
               )}
               {project.links.repo && (
@@ -180,7 +185,7 @@ function ProjectModal({ project, onClose }: Props) {
                   rel="noreferrer"
                 >
                   <Code size={15} />
-                  Código
+                  {t.projectsUI.repo}
                 </a>
               )}
               {project.links.video && (
@@ -191,7 +196,7 @@ function ProjectModal({ project, onClose }: Props) {
                   rel="noreferrer"
                 >
                   <Play size={15} />
-                  Vídeo
+                  {t.projectsUI.video}
                 </a>
               )}
             </div>

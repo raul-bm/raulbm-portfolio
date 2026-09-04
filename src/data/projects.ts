@@ -3,18 +3,9 @@ import type { Project } from "../types";
 export const projects: Project[] = [
   {
     id: "app-parking-react-native",
-    title: "App Parking (React-Native)",
-    category: "App",
     inProgress: true,
     featured: false,
-    role: "Full-stack",
     year: "2026",
-    short:
-      'Adaptación de la web app "App Parking" a una app nativa con React-Native.',
-    description: [
-      "Adaptacion de la web app ya creada a una app nativa con React-native.",
-      "Backend igual al de la web app ya creada.",
-    ],
     tech: [
       "React-Native",
       "Expo",
@@ -33,18 +24,9 @@ export const projects: Project[] = [
   },
   {
     id: "app-parking",
-    title: "App Parking",
-    category: "Web App",
     inProgress: false,
     featured: true,
-    role: "Full-stack",
     year: "2026",
-    short:
-      "Web App para crear pines en dónde el usuario ha aparcado. Con gestión de usuarios, API REST, backend y frontend.",
-    description: [
-      "Desarrollo full-stack de una web app para recordar dónde aparcas el coche.",
-      "Con mapa interactivo usando Leaflet, creación de pines, grupos y amigos, y compartición de ubicaciones en tiempo real mediante WebSockets. Incluye autenticación con Google OAuth y una interfaz trilingüe.",
-    ],
     tech: [
       "React",
       "TypeScript",
@@ -70,16 +52,9 @@ export const projects: Project[] = [
   },
   {
     id: "web-bellamapi",
-    title: "Web y Servidor bellamapi.es",
-    category: "Web",
     inProgress: false,
     featured: true,
-    role: "Colaborador y Mantenedor (full-stack)",
     year: "2023 - actualmente",
-    short: "Colaboración y mantenimiento de un sitio web en producción.",
-    description: [
-      "Colaboro en el desarollo y mantenimiento de una página web en producción y su servidor: corrección de errores, actualizaciones importantes, etc.",
-    ],
     tech: ["Linux", "Prestashop", "MySQL"],
     links: { demo: "https://bellamapi.es" },
     media: [
@@ -90,17 +65,9 @@ export const projects: Project[] = [
   },
   {
     id: "videogame-libro-magico",
-    title: "El Libro Mágico de Alimentos",
-    category: "Videojuego",
     inProgress: false,
     featured: true,
-    role: "Programador",
     year: "2025",
-    short: "Videojuego educativo para niños",
-    description: [
-      "Videojuego educativo para niños.",
-      'Creado para la asignatura "Fundamentos para el Diseño de Videojuegos Didácticos" del grado de Diseño y Desarrollo de Videojuegos.',
-    ],
     tech: ["Unity", "C#"],
     links: { demo: "https://isg-games.itch.io/el-libro-magico-de-alimentos" },
     media: [
@@ -129,14 +96,9 @@ export const projects: Project[] = [
   },
   {
     id: "videogame-party-drinker",
-    title: "Party Drinker",
-    category: "Videojuego",
     inProgress: false,
     featured: false,
-    role: "Programador",
     year: "2026",
-    short: "Videojuego creado en 2 días para la UJI Game Jam 2026",
-    description: ["Videojuego creado en 2 días para la UJI Game Jam 2026."],
     tech: ["Unity", "C#"],
     links: { demo: "https://isg-games.itch.io/party-drinker" },
     media: [
@@ -170,17 +132,9 @@ export const projects: Project[] = [
   },
   {
     id: "videogame-secretos-altura",
-    title: "Los secretos de Altura",
-    category: "Videojuego",
     inProgress: false,
     featured: false,
-    role: "Programador",
     year: "2025",
-    short:
-      "Videojuego creado para un proyecto de tres asignaturas para el grado. Colaborando con el pueblo de Altura por su historia.",
-    description: [
-      "Se creó un videojuego en colaboración con el pueblo de Altura para un proyecto del Grado de Diseño y Desarrollo de Videojuegos.",
-    ],
     tech: ["Unity", "C#"],
     links: { demo: "https://raulbm.itch.io/los-secretos-de-altura" },
     media: [
@@ -194,14 +148,9 @@ export const projects: Project[] = [
   },
   {
     id: "videogame-trick-or-treat",
-    title: "Trick or Treat - Kill Your Beat",
-    category: "Videojuego",
     inProgress: false,
     featured: false,
-    role: "Programador",
     year: "2024",
-    short: "Videojuego creado en 2 días para la UJI Game Jam 2024.",
-    description: ["Videojuego creado en 2 días para la UJI Game Jam 2024."],
     tech: ["Unity", "C#"],
     links: { demo: "https://alexc04.itch.io/trick-or-treat-kill-your-beat" },
     media: [
@@ -225,16 +174,9 @@ export const projects: Project[] = [
   },
   {
     id: "bot-telegram-alarmas",
-    title: "Bot de Telegram",
-    category: "Bot Telegram",
     inProgress: false,
     featured: false,
-    role: "Programador principal",
     year: "2021",
-    short: "Creación de un bot de Telegram para enviar alarmas a usuarios.",
-    description: [
-      "Creación de un bot de Telegram con Node.js y MySQL para emitir alertas de monitorización remota vía Telegram",
-    ],
     tech: ["Node.js", "Docker", "MySQL", "Telegram API", "WebSockets"],
     media: [{ label: "Captura", type: "captura" }],
     hue: 240,

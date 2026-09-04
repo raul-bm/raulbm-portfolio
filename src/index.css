@@ -102,7 +102,52 @@ section[id] {
   border: 1px solid var(--border);
   border-radius: 9px;
   background: var(--surface);
+  color: white;
 }
+
+.lang-dropdown {
+  position: relative;
+}
+
+.lang-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  min-width: 140px;
+  overflow: hidden;
+  z-index: 101;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.lang-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 9px 12px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--text);
+  font: inherit;
+}
+
+.lang-menu button:hover {
+  background: var(--surface2);
+}
+
+@media (max-width: 840px) {
+  .lang-dropdown {
+    width: 100%;
+  }
+  .lang-menu {
+    position: static;
+    margin-top: 6px;
+  }
+}
+
 .navbar-burger {
   display: none;
   background: none;
@@ -270,7 +315,7 @@ section[id] {
 }
 .hero-social {
   display: flex;
-  gap: 9px;
+  gap: 20px;
 }
 .hero-social a {
   display: inline-flex;
@@ -279,13 +324,11 @@ section[id] {
   width: 36px;
   height: 36px;
   border-radius: 9px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
+  color: white;
 }
+
 .hero-social a:hover {
   color: var(--accent);
-  border-color: var(--accent);
 }
 .hero-code {
   background: var(--surface);

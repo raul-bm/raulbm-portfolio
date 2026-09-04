@@ -1,11 +1,16 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import type { Project } from "../types";
+import { useLang } from "../i18n/LanguageContext";
 
 type Props = { project: Project; onSelect: (project: Project) => void };
 
 function ProjectCard({ project, onSelect }: Props) {
   const imageProject = project.media.length > 0 ? project.media[0]?.src : null;
+
+  const { t } = useLang();
+
+  const tr = t.projectsDetails[project.id];
 
   return (
     <motion.article
@@ -34,17 +39,17 @@ function ProjectCard({ project, onSelect }: Props) {
               }
         }
       >
-        <span className="project-card-cat">{project.category}</span>
+        <span className="project-card-cat">{tr.category}</span>
         {project.inProgress && (
-          <span className="project-card-cat3">EN PROGRESO</span>
+          <span className="project-card-cat3">{t.projectsUI.inProgress}</span>
         )}
         {project.featured && (
-          <span className="project-card-cat2">DESTACADO</span>
+          <span className="project-card-cat2">{t.projectsUI.featured}</span>
         )}
       </div>
       <div className="project-card-body">
-        <h3>{project.title}</h3>
-        <p>{project.short}</p>
+        <h3>{tr.title}</h3>
+        <p>{tr.short}</p>
         <div className="chips">
           {project.tech.slice(0, 3).map((t) => (
             <span key={t} className="chip">
@@ -54,7 +59,7 @@ function ProjectCard({ project, onSelect }: Props) {
           {project.tech.length > 3 && <span className="chip">...</span>}
         </div>
         <span className="project-card-link">
-          Ver proyecto <ArrowRight size={15} />
+          {t.projectsUI.viewProject} <ArrowRight size={15} />
         </span>
       </div>
     </motion.article>
