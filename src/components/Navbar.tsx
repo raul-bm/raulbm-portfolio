@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Download, Menu, X, Globe, ChevronDown } from "lucide-react";
+import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
 
 function Navbar() {
