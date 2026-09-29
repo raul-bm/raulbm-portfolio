@@ -16,7 +16,10 @@ export type Dict = {
     subMid: string;
     subBold2: string;
     subPost: string;
-    cv: string;
+    cvWeb: string;
+    cvWebLink: string;
+    cvVideogame: string;
+    cvVideogameLink: string;
     window: string;
     roleLabel: string;
     roleValue: string;
@@ -111,7 +114,10 @@ export const translations: Record<Lang, Dict> = {
       subMid: "y de",
       subBold2: "videojuegos",
       subPost: ". Construyo juegos y aplicaciones completas.",
-      cv: "Descargar CV",
+      cvWeb: "CV Desarrollo Web",
+      cvWebLink: "./files/curriculum-raulbm-web-es.pdf",
+      cvVideogame: "CV Programación Videojuegos",
+      cvVideogameLink: "./files/curriculum-raulbm-gamedeveloper-en.pdf",
       window: "quien-soy.js",
       roleLabel: "rol",
       roleValue: "Desarrollador Web y de Videojuegos",
@@ -270,7 +276,10 @@ export const translations: Record<Lang, Dict> = {
       subMid: "and",
       subBold2: "Videogame",
       subPost: "Developer. I make vidoegames and full apps.",
-      cv: "Download CV",
+      cvWeb: "Web Developer CV",
+      cvWebLink: "./files/curriculum-raulbm-web-en.pdf",
+      cvVideogame: "Videogame Developer CV",
+      cvVideogameLink: "./files/curriculum-raulbm-gamedeveloper-en.pdf",
       window: "who-i-am.js",
       roleLabel: "role",
       roleValue: "Web and Videogame Developer",

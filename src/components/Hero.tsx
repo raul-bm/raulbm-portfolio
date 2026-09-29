@@ -44,13 +44,22 @@ function Hero() {
           </p>
           <div className="hero-actions">
             <a
-              href="./files/curriculum-raulbm.pdf"
+              href={t.hero.cvWebLink}
               download={true}
               target="_blank"
               className="btn btn-primary"
             >
               <Download size={16} />
-              {t.hero.cv}
+              {t.hero.cvWeb}
+            </a>
+            <a
+              href={t.hero.cvVideogameLink}
+              download={true}
+              target="_blank"
+              className="btn btn-primary"
+            >
+              <Download size={16} />
+              {t.hero.cvVideogame}
             </a>
           </div>
           <div className="hero-social">

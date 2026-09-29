@@ -43,15 +43,6 @@ function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="./files/curriculum-raulbm.pdf"
-            download={true}
-            target="_blank"
-            className="navbar-cv btn-primary"
-          >
-            <Download size={15} />
-            CV
-          </a>
           <div className="lang-dropdown">
             <button
               type="button"
@@ -60,8 +51,8 @@ function Navbar() {
               aria-expanded={langOpen}
               onClick={() => setLangOpen((o) => !o)}
             >
-              <Globe size={15} color="white" /> {lang.toUpperCase()}{" "}
-              <ChevronDown size={14} color="white" />
+              <Globe size={18} color="white" /> {lang.toUpperCase()}{" "}
+              <ChevronDown size={18} color="white" />
             </button>
             {langOpen && (
               <div className="lang-menu" role="menu">
