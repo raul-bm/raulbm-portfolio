@@ -117,7 +117,7 @@ export const translations: Record<Lang, Dict> = {
       cvWeb: "CV Desarrollo Web",
       cvWebLink: "./files/curriculum-raulbm-web-es.pdf",
       cvVideogame: "CV Programación Videojuegos",
-      cvVideogameLink: "./files/curriculum-raulbm-gamedeveloper-en.pdf",
+      cvVideogameLink: "./files/curriculum-raulbm-gamedeveloper-es.pdf",
       window: "quien-soy.js",
       roleLabel: "rol",
       roleValue: "Desarrollador Web y de Videojuegos",
